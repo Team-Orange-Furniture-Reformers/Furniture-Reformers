@@ -4,11 +4,14 @@ import pydeck as pdk
 
 # Create a dataframe with latitudes, longitudes, labels, and information
 data = pd.DataFrame({
-    'lat': [37.359520, 37.376300, 37.291370, 37.292900, 37.323908],
-    'lon': [-121.869583, -121.915660, -121.879540, -121.966520, -121.92155],
-    'label': ['Habitat for Humanity ReStore San Jose', 'What a Room', 'HopeThrift', 'Home Consignment Center', 'Goodwill Industries of Silicon Valley'],
-    'info': ['https://restore.habitatebsv.org/bay-area-restores/san-jose/', 'https://whataroom.com/', 'https://hope-thrift.org/', 'https://thehomeconsignmentcenter.com/', 'https://goodwillsv.org/']
+        'lat': [37.359520, 37.376300, 37.291370, 37.292900, 37.323908],
+        'lon': [-121.869583, -121.915660, -121.879540, -121.966520, -121.92155],
+        'label': ['Habitat for Humanity ReStore San Jose', 'What a Room', 'HopeThrift', 'Home Consignment Center', 'Goodwill Industries of Silicon Valley'],
+        'info': ['https://restore.habitatebsv.org/bay-area-restores/san-jose/', 'https://whataroom.com/', 'https://hope-thrift.org/', 'https://thehomeconsignmentcenter.com/', 'https://goodwillsv.org/']
 })
+        #Display the links as hyperlinks
+for i in range(len(data)):
+                st.markdown(f"[{data['label'][i]}]({data['info'][i]})")
 
 # Create a map with pydeck and streamlit
 st.pydeck_chart(pdk.Deck(
