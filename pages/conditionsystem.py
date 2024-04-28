@@ -17,7 +17,7 @@ st.title("Determine Furniture's Condition")
 
 uploaded_file = st.file_uploader("",type=["png", "jpg", "jpeg"])
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='OpenAI_API_Key')
 
 image_path = "images/"
 

@@ -12,7 +12,7 @@ st.sidebar.page_link("pages/conditionsystem.py", label = "Determine Furniture's 
 
 st.title("Dispose/Donate/Sell Furniture")
 
-client = OpenAI(api_key="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") 
+client = OpenAI(api_key="OpenAI_API_Key") 
 
 # Create a wrapper function
 def get_completion(prompt, model="gpt-3.5-turbo"):

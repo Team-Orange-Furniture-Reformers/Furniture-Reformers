@@ -14,7 +14,7 @@ st.title("Pick Up Furniture")
 message_1 = "Click the name to learn more."
 st.header(message_1)
 
-client = OpenAI(api_key="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") 
+client = OpenAI(api_key="OpenAI_API_Key") 
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
    completion = client.chat.completions.create(
